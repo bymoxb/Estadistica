@@ -19,7 +19,7 @@ public class TablaT {
         tam = tam - 1;
         NC = NC - 1;
 
-        File f = new File("tabla t.txt");
+        File f = new File("C:\\Users\\moxb\\OneDrive\\Documentos\\NetBeansProjects\\Estadistica Proyecto\\src\\tablaT\\tabla t.txt");
         Scanner arch = new Scanner(f);
         String aux, dato = "";
         String[] temp;
