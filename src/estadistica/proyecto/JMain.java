@@ -284,7 +284,7 @@ public class JMain extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Asegúrese de haber exportado los datos con el siguiente formato.\n"
                 + "- Utilize una coma (,) para separar la parte entera de la decimal\n"
                 + "- Utilize punto y coma (;) para separar las columas de datos\n"
-                + "- Utilize Excel para guardar el archivo como (csv)",
+                + "- Utilize Excel para exportar el archivo con formato (.csv)",
                 "Aviso!", JOptionPane.INFORMATION_MESSAGE, m);
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel5MouseClicked
