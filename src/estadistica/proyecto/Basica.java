@@ -18,7 +18,7 @@ public class Basica {
         Ordenar ordenar = new Ordenar();
         this.lista = ordenar.Ordenar(lista);
     }
-    
+
     public ArrayList getlista() {
         return this.lista;
     }

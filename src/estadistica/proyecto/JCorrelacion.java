@@ -232,7 +232,6 @@ public class JCorrelacion extends javax.swing.JFrame {
         jr.setText(Float.toString(cal.R()));
         jr2.setText(Float.toString(cal.R2()));
 
-
     }//GEN-LAST:event_formWindowOpened
 
     private void jbtnGraficoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnGraficoActionPerformed
