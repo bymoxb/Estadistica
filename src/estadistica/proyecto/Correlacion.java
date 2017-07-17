@@ -1,3 +1,4 @@
+package estadistica.proyecto;
 
 import java.util.ArrayList;
 

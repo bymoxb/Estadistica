@@ -23,13 +23,13 @@ public class JCorrelacion extends javax.swing.JFrame {
         this.setResizable(false);
         try {
             setIconImage(new ImageIcon(getClass().getResource("/img/icon33.png")).getImage());
-            
+
         } catch (Exception e) {
         }
     }
-    
+
     GestionDatos datos;
-    
+
     public void addLista(GestionDatos datos) {
         this.datos = datos;
     }
@@ -210,14 +210,15 @@ public class JCorrelacion extends javax.swing.JFrame {
         //
 
         Correlacion cal = new Correlacion(datos.getX(), datos.getY());
-        
+
         jsxx.setText(Float.toString(cal.Snn('X')));
         jsyy.setText(Float.toString(cal.Snn('Y')));
         jsxy.setText(Float.toString(cal.Sxy()));
         jbeta1.setText(Float.toString(cal.Beta1()));
         jbeta0.setText(Float.toString(cal.Beta0()));
+        jr.setText(Float.toString(cal.R()));
         jr2.setText(Float.toString(cal.R2()));
-        
+
 
     }//GEN-LAST:event_formWindowOpened
 
