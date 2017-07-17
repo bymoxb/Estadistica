@@ -15,23 +15,10 @@ public class Basica {
     private float media, mediana, moda, varianza, desviacion;
 
     public Basica(ArrayList<Float> lista) {
-        this.lista = Ordenar(lista);
+        Ordenar ordenar = new Ordenar();
+        this.lista = ordenar.Ordenar(lista);
     }
-
-    private ArrayList Ordenar(ArrayList<Float> lista) {
-        Float auxlista;
-        for (int i = 0; i < lista.size() - 1; i++) {
-            for (int j = 0; j < lista.size() - 1; j++) {
-                if (lista.get(j + 1) < lista.get(j)) {
-                    auxlista = lista.get(j + 1);
-                    lista.set(j + 1, lista.get(j));
-                    lista.set(j, auxlista);
-                }
-            }
-        }
-        return lista;
-    }
-
+    
     public ArrayList getlista() {
         return this.lista;
     }
@@ -165,7 +152,7 @@ public class Basica {
             aux = (float) (Math.pow((listaaux.get(i)), n));
             listaaux2.add(aux);
         }
-        
+
         listaaux = null;
         return listaaux2;
     }
