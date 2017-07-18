@@ -6,6 +6,9 @@
 package estadistica.proyecto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Basica {
 
@@ -51,24 +54,6 @@ public class Basica {
             mediana = lista.get(n);
         }
         return mediana;
-    }
-
-    public void Moda() {
-        ArrayList<Object> x = new ArrayList();
-
-        for (int i = 0; i < lista.size(); i++) {
-            for (int j = 0; j < lista.size(); j++) {
-                if (j > i) {
-                    if (lista.get(i).equals(lista.get(j))) {
-                        x.add(lista.get(i));
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < x.size(); i++) {
-            System.out.println(x.get(i));
-        }
     }
 
     public void resta() {
@@ -188,5 +173,40 @@ public class Basica {
         k = k - y;
         listaaux = null;
         return k;
+    }
+
+    public float Moda(ArrayList<Float> dat) {
+
+        Map<Float, Float> m = new HashMap<Float, Float>();
+
+        for (float elemento : dat) {
+            if (m.containsKey(elemento)) {
+                m.put(elemento, m.get(elemento) + 1);
+            } else {
+                m.put(elemento, (float) 1.0);
+            }
+        }
+
+        float repeticiones = 0;
+        ArrayList<Float> moda = new ArrayList<Float>();
+
+        Iterator<Map.Entry<Float, Float>> iter = m.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<Float, Float> e = iter.next();
+
+            if (e.getValue() > repeticiones) {
+                moda.clear();
+                moda.add(e.getKey());
+                repeticiones = e.getValue();
+            } else if (e.getValue() == repeticiones) {
+                moda.add(e.getKey());
+            }
+
+        }
+        if (moda.size() == dat.size()) {
+            return 0;
+        } else {
+            return moda.get(0);
+        }
     }
 }

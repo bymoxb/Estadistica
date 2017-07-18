@@ -8,6 +8,7 @@ package estadistica.proyecto;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
@@ -18,7 +19,7 @@ import org.math.plot.plotObjects.BaseLabel;
  *
  * @author Jonathan
  */
-public class LinearRegresion {
+public class RegresionLineal {
 
     SimpleRegression sr = new SimpleRegression();
     Plot2DPanel plot = new Plot2DPanel();
@@ -28,20 +29,21 @@ public class LinearRegresion {
 //        Map<Integer, Integer> m = new HashMap<Ingeter, Integer>();
         double[] x = new double[a.size()];
         double[] y = new double[b.size()];
+
         for (int i = 0; i < x.length; i++) {
             x[i] = a.get(i);
-
         }
 
         for (int i = 0; i < y.length; i++) {
             y[i] = b.get(i);
-
         }
 
         for (int i = 0; i < x.length; i++) {
             sr.addData(x[i], y[i]);
         }
+
         double[] yc = new double[y.length];
+
         for (int i = 0; i < x.length; i++) {
             yc[i] = sr.predict(x[i]);
         }
@@ -49,13 +51,23 @@ public class LinearRegresion {
         plot.addLegend("South");
         plot.addScatterPlot("Datos", x, y);
         plot.addLinePlot("Regresion", x, yc);
+
         BaseLabel titulo = new BaseLabel("Regresion Lineal", Color.blue, 0.5, 1.1);
         plot.addPlotable(titulo);
+
+        //FRAME
         JFrame frame = new JFrame("Regresion Lineal");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 500);
         frame.add(plot, BorderLayout.CENTER);
         frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(1);
+        try {
+            frame.setIconImage(new ImageIcon(getClass().getResource("/img/icon33.png")).getImage());
+        } catch (Exception e) {
+        }
     }
 
 }

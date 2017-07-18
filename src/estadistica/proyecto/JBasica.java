@@ -592,6 +592,18 @@ public class JBasica extends javax.swing.JFrame {
         //FORMA
         jasimetria2.setText(Float.toString(caly.Asimetria()));
         jcurtosis2.setText(Float.toString(caly.Curtosis()));
+
+        if (calx.Moda(datos.getX()) == 0) {
+            jmoda.setText("No hay moda");
+        } else {
+            jmoda.setText(Float.toString(calx.Moda(datos.getX())));
+        }
+
+        if (caly.Moda(datos.getY()) == 0) {
+            jmoda.setText("No hay moda");
+        } else {
+            jmoda2.setText(Float.toString(caly.Moda(datos.getY())));
+        }
     }//GEN-LAST:event_formWindowOpened
 
     private void jmediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmediaActionPerformed

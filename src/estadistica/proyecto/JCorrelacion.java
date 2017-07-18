@@ -235,7 +235,7 @@ public class JCorrelacion extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jbtnGraficoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnGraficoActionPerformed
-        LinearRegresion grafico = new LinearRegresion();
+        RegresionLineal grafico = new RegresionLineal();
         grafico.LinearRegresion(datos.getX(), datos.getY());
 
         // TODO add your handling code here:

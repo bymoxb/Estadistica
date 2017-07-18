@@ -223,6 +223,7 @@ public class JMain extends javax.swing.JFrame {
 
         if (op == JFileChooser.APPROVE_OPTION) {
             File f = new File(elegirarch.getSelectedFile().getPath());
+            
             if (f.getName().endsWith(".txt") || f.getName().endsWith(".csv")) {
                 leer = new GestionDatos();
                 try {
