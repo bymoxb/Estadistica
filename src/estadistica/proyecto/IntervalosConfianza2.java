@@ -12,12 +12,12 @@ import java.util.ArrayList;
  *
  * @author moxb
  */
-public class IntervalosConfianza {
+public class IntervalosConfianza2 {
 
     private ArrayList<Float> lista;
     private int NC;
 
-    public IntervalosConfianza(ArrayList<Float> lista, int NC) {
+    public IntervalosConfianza2(ArrayList<Float> lista, int NC) {
         this.lista = lista;
         this.NC = NC;   // 1 -> 90%     2 -> 95%     3 -> 98%       4 -> 99%
     }

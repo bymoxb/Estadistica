@@ -16,12 +16,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moxb
  */
-public class JIntervalosConfianza extends javax.swing.JFrame {
+public class JIntervalosConfianza2 extends javax.swing.JFrame {
 
     /**
      * Creates new form IntervalosConfianza
      */
-    public JIntervalosConfianza() {
+    public JIntervalosConfianza2() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -65,8 +65,8 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
         jdesviacion2 = new javax.swing.JTextField();
         prueba10 = new javax.swing.JLabel();
         jestimador2 = new javax.swing.JTextField();
-        prueba16 = new javax.swing.JLabel();
         jt2 = new javax.swing.JTextField();
+        prueba12 = new javax.swing.JLabel();
         jPanelX = new javax.swing.JPanel();
         jPanelDatos1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -80,8 +80,8 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
         jdesviacion = new javax.swing.JTextField();
         prueba6 = new javax.swing.JLabel();
         jestimador = new javax.swing.JTextField();
-        prueba11 = new javax.swing.JLabel();
         jt = new javax.swing.JTextField();
+        prueba11 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jbtnCalcular1 = new javax.swing.JButton();
 
@@ -135,7 +135,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(41, 41, 41)
-                .addComponent(jComboBox2, 0, 99, Short.MAX_VALUE)
+                .addComponent(jComboBox2, 0, 1, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanelDatosLayout.setVerticalGroup(
@@ -181,7 +181,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
 
         prueba10.setText("Estimador Puntual: ");
 
-        prueba16.setText("Distribución Student (t): ");
+        prueba12.setText("Distribución Student (t): ");
 
         javax.swing.GroupLayout jPanelResultados2Layout = new javax.swing.GroupLayout(jPanelResultados2);
         jPanelResultados2.setLayout(jPanelResultados2Layout);
@@ -189,10 +189,10 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
             jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelResultados2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelResultados2Layout.createSequentialGroup()
-                        .addComponent(prueba16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelResultados2Layout.createSequentialGroup()
+                        .addComponent(prueba12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jt2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelResultados2Layout.createSequentialGroup()
                         .addGroup(jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,8 +225,8 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                     .addComponent(jdesviacion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(prueba16)
-                    .addComponent(jt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prueba12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelResultados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(prueba7)
@@ -245,11 +245,12 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
             .addGroup(jPanelYLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelYLayout.createSequentialGroup()
-                        .addComponent(jPanelDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelResultados2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelYLayout.createSequentialGroup()
+                        .addGroup(jPanelYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanelResultados2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanelDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelYLayout.setVerticalGroup(
@@ -285,7 +286,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addGap(41, 41, 41)
-                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jComboBox1, 0, 1, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanelDatos1Layout.setVerticalGroup(
@@ -316,12 +317,12 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
             jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelResultados1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanelResultados1Layout.createSequentialGroup()
                         .addComponent(prueba11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jt, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelResultados1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelResultados1Layout.createSequentialGroup()
                         .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(prueba3)
                             .addComponent(prueba4))
@@ -329,7 +330,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                         .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlimites, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlimitei, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanelResultados1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelResultados1Layout.createSequentialGroup()
                         .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(prueba5)
                             .addComponent(prueba6))
@@ -352,8 +353,8 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                     .addComponent(jdesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(prueba11)
-                    .addComponent(jt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prueba11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelResultados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(prueba3)
@@ -393,12 +394,12 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
             .addGroup(jPanelXLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelXLayout.createSequentialGroup()
                         .addGroup(jPanelXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanelResultados1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanelDatos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelXLayout.setVerticalGroup(
@@ -464,19 +465,16 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
 
     private void jbtnCalcular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCalcular1ActionPerformed
         if (jComboBox1.getSelectedIndex() != 0) {
-            IntervalosConfianza cal = new IntervalosConfianza(datos.getX(), jComboBox1.getSelectedIndex());
+            IntervalosConfianza2 cal = new IntervalosConfianza2(datos.getX(), jComboBox1.getSelectedIndex());
             try {
                 jestimador.setText(Float.toString(cal.Media()));
                 jdesviacion.setText(Float.toString(cal.Desviacion()));
                 jt.setText(Float.toString(cal.getT()));
-
                 jlimites.setText(Float.toString(cal.LimitesS()));
                 jlimitei.setText(Float.toString(cal.LimitesI()));
-
             } catch (FileNotFoundException ex) {
-                Logger.getLogger(JIntervalosConfianza.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(JIntervalosConfianza2.class.getName()).log(Level.SEVERE, null, ex);
             }
-
         } else {
             JOptionPane.showMessageDialog(null, "Selecione un nivel de confianza", "Aviso !", JOptionPane.INFORMATION_MESSAGE);
         }
@@ -484,7 +482,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
 
     private void jbtnCalcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCalcular2ActionPerformed
         if (jComboBox2.getSelectedIndex() != 0) {
-            IntervalosConfianza cal = new IntervalosConfianza(datos.getY(), jComboBox2.getSelectedIndex());
+            IntervalosConfianza2 cal = new IntervalosConfianza2(datos.getY(), jComboBox2.getSelectedIndex());
             try {
                 jestimador2.setText(Float.toString(cal.Media()));
                 jdesviacion2.setText(Float.toString(cal.Desviacion()));
@@ -494,7 +492,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                 jlimitei2.setText(Float.toString(cal.LimitesI()));
 
             } catch (FileNotFoundException ex) {
-                Logger.getLogger(JIntervalosConfianza.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(JIntervalosConfianza2.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } else {
@@ -519,21 +517,23 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JIntervalosConfianza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JIntervalosConfianza2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JIntervalosConfianza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JIntervalosConfianza2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JIntervalosConfianza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JIntervalosConfianza2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JIntervalosConfianza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JIntervalosConfianza2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JIntervalosConfianza().setVisible(true);
+                new JIntervalosConfianza2().setVisible(true);
             }
         });
     }
@@ -568,7 +568,7 @@ public class JIntervalosConfianza extends javax.swing.JFrame {
     private javax.swing.JTable jtabla;
     private javax.swing.JLabel prueba10;
     private javax.swing.JLabel prueba11;
-    private javax.swing.JLabel prueba16;
+    private javax.swing.JLabel prueba12;
     private javax.swing.JLabel prueba3;
     private javax.swing.JLabel prueba4;
     private javax.swing.JLabel prueba5;

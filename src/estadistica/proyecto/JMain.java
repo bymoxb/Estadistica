@@ -223,7 +223,7 @@ public class JMain extends javax.swing.JFrame {
 
         if (op == JFileChooser.APPROVE_OPTION) {
             File f = new File(elegirarch.getSelectedFile().getPath());
-            
+
             if (f.getName().endsWith(".txt") || f.getName().endsWith(".csv")) {
                 leer = new GestionDatos();
                 try {
@@ -253,9 +253,11 @@ public class JMain extends javax.swing.JFrame {
         if (!jruta.getText().equals("")) {
             if (jComboBox1.getSelectedIndex() != 0) {
                 if (jComboBox1.getSelectedIndex() == 1) {
-
+                    JIntervalosConfianza1 intervalo = new JIntervalosConfianza1();
+                    intervalo.addLista(leer);
+                    intervalo.setVisible(true);
                 } else {
-                    JIntervalosConfianza intervalo = new JIntervalosConfianza();
+                    JIntervalosConfianza2 intervalo = new JIntervalosConfianza2();
                     intervalo.addLista(leer);
                     intervalo.setVisible(true);
                 }

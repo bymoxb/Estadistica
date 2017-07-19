@@ -555,7 +555,7 @@ public class JBasica extends javax.swing.JFrame {
         for (int i = 0; i < datos.NparesOrdenados(); i++) {
             Object filas[] = {i + 1, calx.getlista().get(i), caly.getlista().get(i)};
             ((DefaultTableModel) jtabla.getModel()).addRow(filas);
-        }
+         }
 
         //DATOS X
         //TENDENCIA CENTRAL
